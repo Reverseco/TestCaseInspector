@@ -17,7 +17,7 @@ Bash script to find and report failing test cases.
 Git Bash or Hyper Terminal installed on your system.\
 C++ compiler (e.g., g++, clang++).\
 Basic knowledge of running scripts in a terminal.\
-Ensure all files (correct.cpp, wrong.cpp, random.cpp, and checker.sh) are present in the same project directory.\
+Ensure all files (correct.cpp, wrong.cpp, random.cpp, and checker.sh) are present in the same project directory.
 
 ## usage
 Run the Checker Script

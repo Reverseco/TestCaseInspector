@@ -1,18 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// #include <ext/pb_ds/assoc_container.hpp> 
-// #include <ext/pb_ds/tree_policy.hpp> 
-// using namespace __gnu_pbds; 
-  
-// #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
-// using namespace __gnu_pbds;
-// typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : k-th element in the set
-
- 
 #define             fast  cin.tie(0);cout.tie(0);ios_base::sync_with_stdio(false);
 #define             test ll t; cin>>t; while(t--)
 #define             loop(i,a,b) for(ll i=a;i<b;i++)
@@ -34,8 +22,6 @@ using namespace std;
 typedef             long long int ll;
 typedef             unsigned long long ull;
 typedef             long double lld;
-// #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
- 
 ll power(ll base, ll expo){ll ans = 1;while(expo){if(expo & 1LL)ans = (ans * base) % mod;base = (base * base) % mod;expo >>= 1LL;}return ans;}
 ll modinv(ll x){return power(x, mod-2);}
 ll C(ll n, ll r){if(r > n) return 0;ll ans = 1;for(ll i=0; i<r; i++)ans = (((ans * (n-i))%mod) * modinv(i+1))%mod;return ans;}
@@ -44,10 +30,7 @@ vector<ll> get_factors(ll n) {vector<ll> factors;for(ll i=2; i*i<=n ;i++) {if(n%
 ll get_lcm(ll a, ll b) {return (a*b)/__gcd(a,b);}
 bool is_prime(ll n) {if(n < 2) return false;if(n == 2) return true;for(ll i=2; i*i <= n; i++)if(n % i == 0)return false;return true;}
 bool is_vowel(char ch) {return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U';}
-// void seive(vector<bool>&v, ll n){v[0] = v[1] = false;for(ll i=2; i*i<n; i++){for(ll j=2*i; j<n; j+=i){v[j] = false;}}}
-// ll modinv1(ll p,ll q){ll ex;ex=mod-2;while (ex) {if (ex & 1) {p = (p * q) % mod;}q = (q * q) % mod;ex>>= 1;}return p;}
 ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
-//ll mod_div(ll a, ll b, ll m) {a = a % m; b = b % m; return (mod_mul(a, mminvprime(b, m), m) + m) % m;}  //only for prime m
 
 #ifndef ONLINE_JUDGE
 #define print(x) cerr << #x <<" "; _print(x); cerr << endl;
@@ -74,8 +57,6 @@ template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 
-
-
 void solv(){
      ll n; cin>>n;
      ivec;
@@ -97,15 +78,7 @@ void solv(){
 }
      
 int main(){
-   // #ifndef ONLINE_JUDGE
-   // freopen("input.txt", "r", stdin);
-   // freopen("output.txt", "w", stdout);
-   // freopen("error.txt", "w", stderr);
-   // #endif
-    // fast;
-    //  test{
        solv();
        cout<<endl;
-     // }
 }
 

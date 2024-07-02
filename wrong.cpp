@@ -1,17 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-// #include <ext/pb_ds/assoc_container.hpp> 
-// #include <ext/pb_ds/tree_policy.hpp> 
-// using namespace __gnu_pbds; 
-  
-// #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
-// using namespace __gnu_pbds;
-// typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : k-th element in the set
-
  
 #define             fast  cin.tie(0);cout.tie(0);ios_base::sync_with_stdio(false);
 #define             test ll t; cin>>t; while(t--)
@@ -34,7 +22,6 @@ using namespace std;
 typedef             long long int ll;
 typedef             unsigned long long ull;
 typedef             long double lld;
-// #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
  
 ll power(ll base, ll expo){ll ans = 1;while(expo){if(expo & 1LL)ans = (ans * base) % mod;base = (base * base) % mod;expo >>= 1LL;}return ans;}
 ll modinv(ll x){return power(x, mod-2);}
@@ -44,10 +31,7 @@ vector<ll> get_factors(ll n) {vector<ll> factors;for(ll i=2; i*i<=n ;i++) {if(n%
 ll get_lcm(ll a, ll b) {return (a*b)/__gcd(a,b);}
 bool is_prime(ll n) {if(n < 2) return false;if(n == 2) return true;for(ll i=2; i*i <= n; i++)if(n % i == 0)return false;return true;}
 bool is_vowel(char ch) {return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U';}
-// void seive(vector<bool>&v, ll n){v[0] = v[1] = false;for(ll i=2; i*i<n; i++){for(ll j=2*i; j<n; j+=i){v[j] = false;}}}
-// ll modinv1(ll p,ll q){ll ex;ex=mod-2;while (ex) {if (ex & 1) {p = (p * q) % mod;}q = (q * q) % mod;ex>>= 1;}return p;}
 ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
-//ll mod_div(ll a, ll b, ll m) {a = a % m; b = b % m; return (mod_mul(a, mminvprime(b, m), m) + m) % m;}  //only for prime m
 
 #ifndef ONLINE_JUDGE
 #define print(x) cerr << #x <<" "; _print(x); cerr << endl;
@@ -82,8 +66,6 @@ void solv(){
      ll ans=v[n-1];
      ll x=0;
      for(ll i=n-2;i>=0;i--){
-          // print(v[i]);
-          // print(st);
          if(v[i]>ans){
             ans=v[i];
             x=min(1ll,x);
@@ -91,20 +73,11 @@ void solv(){
             x+=1;
          }
      }
-     // print(x);
      cout<<ans+x;
 }
      
 int main(){
-   // #ifndef ONLINE_JUDGE
-   // freopen("input.txt", "r", stdin);
-   // freopen("output.txt", "w", stdout);
-   // freopen("error.txt", "w", stderr);
-   // #endif
-   //  fast;
-   //   test{
        solv();
        cout<<endl;
-     // }
 }
 

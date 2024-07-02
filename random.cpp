@@ -12,7 +12,6 @@ int main()
 	for(int i=0;i<n;i++){
 		a[i]=rand()%10+1;
 	}
-	// if(l > r) swap(l, r);
 	cout << n<<endl;
 	for(int i=0;i<n;i++){
 		cout<<a[i]<<" ";
